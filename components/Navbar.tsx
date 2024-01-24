@@ -133,7 +133,7 @@ const LogoWrapper = styled.a`
   margin-right: auto;
   text-decoration: none;
 
-  color: rgb(var(--logoColor));
+  color: var(--white);
 `;
 
 const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
@@ -150,7 +150,7 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
 
   a {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--textSecondary), 0.75)')};
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -171,7 +171,7 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   height: 8rem;
   z-index: var(--z-navbar);
 
-  background-color: rgb(var(--navbarBackground));
+  background-color: var(--navbarBackgroundColor);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   visibility: ${(p) => (p.hidden ? 'hidden' : 'visible')};
   transform: ${(p) => (p.hidden ? `translateY(-8rem) translateZ(0) scale(1)` : 'translateY(0) translateZ(0) scale(1)')};

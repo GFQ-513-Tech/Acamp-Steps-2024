@@ -7,23 +7,19 @@ import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  'logoipsum-logo-1.svg',
-  'logoipsum-logo-2.svg',
-  'logoipsum-logo-3.svg',
-  'logoipsum-logo-4.svg',
-  'logoipsum-logo-5.svg',
-  'logoipsum-logo-6.svg',
-  'logoipsum-logo-7.svg',
+  'gfq-logo.svg',
+  'regiao-513.svg'
 ];
 
 export default function Partners() {
   return (
     <PartnersWrapper>
-      <Title>official partners with</Title>
+      <Title>Realização</Title>
       <Swiper
+        
         modules={[Autoplay]}
-        slidesPerView={6}
-        spaceBetween={30}
+        slidesPerView={2}
+        spaceBetween={20}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
         speed={3000}
@@ -36,7 +32,7 @@ export default function Partners() {
       >
         {PARTNER_LOGOS.map((logo) => (
           <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={128} height={128} />
+            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={130} height={130} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -66,8 +62,13 @@ const PartnersWrapper = styled(Container)`
   .swiper-wrapper {
     will-change: transform;
     transition-timing-function: linear;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     user-select: none;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 
   .swiper-slide {

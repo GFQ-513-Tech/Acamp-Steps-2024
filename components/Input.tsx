@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-  border: 1px solid rgb(var(--inputBackground));
-  background: rgb(var(--inputBackground));
+  border: 1px solid var(--defaultInputBackgroundColor);
+  background: var(--defaultInputBackgroundColor);
   border-radius: 0.6rem;
   font-size: 1.6rem;
   padding: 1.8rem;
   box-shadow: var(--shadow-md);
-  /* color: rgb(var(--textSecondary)); */
+  /* color: var(--textLight); */
 
   &:focus {
     outline: none;

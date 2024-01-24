@@ -102,7 +102,7 @@ const CopyButton = styled.button<{ copied: boolean }>`
   height: 3rem;
   line-height: normal;
   border-radius: 0.3rem;
-  color: rgb(var(--text));
+  color: var(--textDark);
   z-index: 1;
   line-height: 1;
 
@@ -118,8 +118,8 @@ const CopyButton = styled.button<{ copied: boolean }>`
     line-height: 1.5;
     font-size: 1.4rem;
     padding: 0.5rem 1rem;
-    color: rgb(var(--primary));
-    background-color: rgb(var(--secondary));
+    color: var(--darkGreenColor);
+    background-color: var(--darkGreenColor);
   }
 
   &:hover {

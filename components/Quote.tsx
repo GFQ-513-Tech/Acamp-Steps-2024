@@ -17,10 +17,10 @@ export default function Quote({ content, author, cite }: QuoteProps) {
 }
 
 const Container = styled.figure`
-  border-left: 1px solid rgb(var(--secondary));
+  border-left: 1px solid var(--darkGreenColor);
   padding: 3rem;
   quotes: ${`"\\201c" "\\201d" "\\2018" "\\2019"`};
-  color: rgb(var(--secondary));
+  color: var(--darkGreenColor);
   margin-bottom: 3.7rem;
 
   &::before {
@@ -35,7 +35,7 @@ const Container = styled.figure`
 `;
 
 const Blockquote = styled.blockquote`
-  color: rgb(var(--text));
+  color: var(--textDark);
   display: inline;
   font-size: 2.2rem;
   line-height: 3rem;
@@ -44,7 +44,7 @@ const Blockquote = styled.blockquote`
 `;
 
 const Caption = styled.figcaption`
-  color: rgb(var(--text));
+  color: var(--textDark);
   display: block;
   font-size: 1.6rem;
   margin-top: 2.5rem;

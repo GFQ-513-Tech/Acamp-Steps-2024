@@ -26,7 +26,7 @@ const RichText = styled.div`
         left: 0;
         top: 0;
         text-align: center;
-        color: rgb(var(--primary));
+        color: var(--darkGreenColor);
         font-family: arial;
         transform: scaleX(-1) rotate(-35deg);
       }
@@ -42,17 +42,17 @@ const RichText = styled.div`
     border-collapse: separate;
   }
   th {
-    background: rgb(var(--textSecondary));
+    background: var(--textLight);
   }
 
   th,
   td {
-    border: 1px solid rgb(var(--textSecondary));
+    border: 1px solid var(--textLight);
     padding: 1rem;
   }
 
   tr:nth-child(even) {
-    background: rgb(var(--textSecondary));
+    background: var(--textLight);
   }
 
   ${media('<=desktop')} {

@@ -39,7 +39,7 @@ export default function WaveCta() {
 }
 
 const CtaWrapper = styled.div`
-  background: rgb(var(--secondary));
+  background: var(--darkGreenColor);
   margin-top: -1rem;
   padding-bottom: 16rem;
 
@@ -49,13 +49,13 @@ const CtaWrapper = styled.div`
 `;
 
 const Title = styled(SectionTitle)`
-  color: rgb(var(--textSecondary));
+  color: var(--textLight);
   margin-bottom: 4rem;
 `;
 
 const OutlinedButton = styled(Button)`
-  border: 1px solid rgb(var(--textSecondary));
-  color: rgb(var(--textSecondary));
+  border: 1px solid var(--textLight);
+  color: var(--textLight);
 `;
 
 const CustomButtonGroup = styled(ButtonGroup)`

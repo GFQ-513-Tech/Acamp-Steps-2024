@@ -42,6 +42,6 @@ const CustomButton = styled.button`
   background: transparent;
 
   svg {
-    color: var(--logoColor);
+    color: var(--white);
   }
 `;

@@ -1,9 +1,8 @@
-import NextLink from 'next/link';
+import NextImage from 'next/image';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
-import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { media } from 'utils/media';
@@ -14,25 +13,19 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>Geração forte quadrangular região 513</CustomOverTitle>
+        <Heading>ACAMP GFQ 2024 STEPS</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          Prepare-se para quatro dias incríveis de louvor, adoração, ensinamentos poderosos e muita diversão! Junte-se a nós e faça parte dessa experiência transformadora!
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
+          <Button mainButton onClick={() => setIsModalOpened(true)}>
+            Faça sua inscrição <span>&rarr;</span>
           </Button>
-          <NextLink href="#whitepaper" passHref>
-            <Button transparent>
-              Features <span>&rarr;</span>
-            </Button>
-          </NextLink>
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <HeroIllustration />
+        <NextImage src="/images/steps-logo.png" alt="steps-logo" width={500} height={500} />
       </ImageContainer>
     </HeroWrapper>
   );
@@ -73,8 +66,9 @@ const ImageContainer = styled.div`
   }
 
   ${media('<=desktop')} {
-    margin-top: 2rem;
+    margin-top: 4rem;
     justify-content: center;
+    max-width: 50%;
     svg {
       max-width: 80%;
     }
@@ -92,6 +86,9 @@ const Description = styled.p`
 `;
 
 const CustomOverTitle = styled(OverTitle)`
+  ::before {
+    background-color: var(--darkGreenColor);
+  }
   margin-bottom: 2rem;
 `;
 

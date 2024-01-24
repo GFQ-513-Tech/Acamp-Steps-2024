@@ -36,9 +36,9 @@ const ArticleCardWrapper = styled.a`
   overflow: hidden;
   text-decoration: none;
   border-radius: 0.6rem;
-  background: rgb(var(--cardBackground));
+  background: var(--defaultCardBackgroundColor);
   cursor: pointer;
-  color: rgb(var(--text));
+  color: var(--textDark);
 `;
 
 const HoverEffectContainer = styled.div`

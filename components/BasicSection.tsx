@@ -42,6 +42,9 @@ const Title = styled.h1`
 `;
 
 const CustomOverTitle = styled(OverTitle)`
+  ::before {
+    background-color: var(--darkGreenColor);
+  }
   margin-bottom: 2rem;
 `;
 

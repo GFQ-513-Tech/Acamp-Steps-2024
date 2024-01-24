@@ -17,7 +17,7 @@ export default function NotFoundPage() {
 }
 
 const Wrapper = styled.div`
-  background: rgb(var(--background));
+  background: var(--darkBlueColor));
   margin: 10rem 0;
   text-align: center;
 `;

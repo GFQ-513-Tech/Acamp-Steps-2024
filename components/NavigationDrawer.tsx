@@ -67,7 +67,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     z-index: var(--z-drawer);
-    background: rgb(var(--background));
+    background: var(--darkBlueColor));
     transition: margin-left 0.3s cubic-bezier(0.82, 0.085, 0.395, 0.895);
     overflow: hidden;
   }

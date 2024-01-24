@@ -9,7 +9,7 @@ const Overlay = styled.div`
   justify-content: center;
   align-items: center;
   z-index: var(--z-modal);
-  color: rgb(var(--textSecondary));
+  color: var(--textLight);
 `;
 
 export default Overlay;

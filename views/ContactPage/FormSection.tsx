@@ -120,7 +120,7 @@ const InputStack = styled.div`
 `;
 
 const ErrorMessage = styled.p`
-  color: rgb(var(--errorColor));
+  color: var(defaultErrorInputColor);
   font-size: 1.5rem;
 `;
 

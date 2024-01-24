@@ -36,19 +36,19 @@ export default function Page({ title, description, children }: PropsWithChildren
 }
 
 const Wrapper = styled.div`
-  background: rgb(var(--background));
+  background: var(--darkBlueColor));
 `;
 
 const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(var(--secondary));
+  background: var(--darkGreenColor);
   min-height: 40rem;
 `;
 
 const Title = styled(SectionTitle)`
-  color: rgb(var(--textSecondary));
+  color: var(--textLight);
   margin-bottom: 2rem;
 `;
 

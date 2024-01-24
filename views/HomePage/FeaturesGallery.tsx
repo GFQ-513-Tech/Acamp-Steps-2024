@@ -76,8 +76,8 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <OverTitle>features</OverTitle>
-        <SectionTitle>What are you signing in for?</SectionTitle>
+        <OverTitle>Dúvidas</OverTitle>
+        <SectionTitle>Dúvidas Frequentes</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>
@@ -92,6 +92,7 @@ const FeaturesGalleryWrapper = styled(Container)`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color: var(--white);
 `;
 
 const GalleryWrapper = styled.div`
@@ -117,6 +118,10 @@ const TabsContainer = styled.div`
 
   & > *:not(:first-child) {
     margin-top: 2rem;
+  }
+
+  & > div {
+    background-color: var(--defaultCardBackgroundColor);
   }
 
   ${media('<=desktop')} {
@@ -157,7 +162,7 @@ const Tab = styled.div<{ isActive: boolean }>`
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem;
-  background: rgb(var(--cardBackground));
+  background: var(--defaultCardBackgroundColor);
   box-shadow: var(--shadow-md);
   opacity: ${(p) => (p.isActive ? 1 : 0.6)};
   cursor: pointer;

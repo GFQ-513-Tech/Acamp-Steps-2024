@@ -2,8 +2,8 @@ import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
-import Link from 'components/Link';
 import { EnvVars } from 'env';
+import { media } from 'utils/media';
 import { getAllPosts } from 'utils/postsFetcher';
 import Cta from 'views/HomePage/Cta';
 import Features from 'views/HomePage/Features';
@@ -12,7 +12,6 @@ import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
 import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts';
 import Testimonials from 'views/HomePage/Testimonials';
-
 export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
@@ -27,25 +26,20 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Lorem ipsum dolor sit amet consectetur." overTitle="sit amet gogo">
+          <Line />
+          <BasicSection imageUrl="/home-content/first-image.svg" title="O que esperar?" overTitle="Acamp 2024">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
-              voluptate quo deleniti animi laboriosam.{' '}
-              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
-              at suscipit quis est soluta?
+              Se você está em busca de inspiração, conexão e uma experiência inesquecível, você está no lugar certo. Este não é apenas um acampamento; é uma jornada de fé, amizade e crescimento. Junte-se a nós enquanto celebramos a juventude, exploramos a Palavra e construímos memórias que durarão para toda a vida!
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/demo-illustration-2.svg" title="Lorem ipsum dolor sit." overTitle="lorem ipsum" reversed>
+          <BasicSection imageUrl="/home-content/second-image.svg" title="Nossa Programação" overTitle="Acamp 2024" reversed>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore{' '}
-              <strong>voluptate quo deleniti animi laboriosam</strong>. Possimus ullam velit rem itaque consectetur, in distinctio?
+              O Acamp GFQ 2024 (Steps) acontecerá entre os dias 10 e 13 de Fevereiro  no Hotel Fazenda Terra Verde localizado entre São Carlos e Analândia. Junte-se a nós para um fim de semana que vai superar suas expectativas, fortalecer sua fé e criar laços duradouros. 
             </p>
-            <ul>
-              <li>Professional point 1</li>
-              <li>Professional remark 2</li>
-              <li>Professional feature 3</li>
-            </ul>
+            <br />
+            <p>
+              <strong>Inscreva-se agora e faça parte desta experiência transformadora!</strong>
+            </p>
           </BasicSection>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
@@ -60,6 +54,13 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
   );
 }
 
+const Line = styled.hr`
+  border: 0;
+  height: 2px;
+  background: var(--darkGreenColor);
+  margin: 0 80px;
+`;
+
 const HomepageWrapper = styled.div`
   & > :last-child {
     margin-bottom: 15rem;
@@ -67,15 +68,21 @@ const HomepageWrapper = styled.div`
 `;
 
 const DarkerBackgroundContainer = styled.div`
-  background: rgb(var(--background));
+  background: var(--darkBlueColor);
 
   & > *:not(:first-child) {
     margin-top: 15rem;
   }
+
+  ${media('<=desktop')} {
+    & > *:not(:first-child) {
+      margin-top: 6rem;
+    }
+  }
 `;
 
 const WhiteBackgroundContainer = styled.div`
-  background: rgb(var(--secondBackground));
+  background: var(--salmonColor);
 
   & > :last-child {
     padding-bottom: 15rem;
@@ -83,6 +90,12 @@ const WhiteBackgroundContainer = styled.div`
 
   & > *:not(:first-child) {
     margin-top: 15rem;
+  }
+
+  ${media('<=desktop')} {
+    & > *:not(:first-child) {
+      margin-top: 6rem;
+    }
   }
 `;
 

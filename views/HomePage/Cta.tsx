@@ -13,22 +13,22 @@ export default function Cta() {
     <CtaWrapper>
       <Container>
         <Stack>
-          <OverTitle>Lorem ipsum dolor sit amet</OverTitle>
-          <SectionTitle>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</SectionTitle>
+          <OverTitle>Inscrições e lotes</OverTitle>
+          <SectionTitle>Qual o investimento?</SectionTitle>
           <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae accusamus deleniti nihil quas tempora numquam, vitae
-            culpa.
+            Estamos animados em contar que as inscrições para o Acamp 2024 já estão abertas! Sabemos que investir na sua fé e crescimento pessoal é uma escolha significativa, e queremos tornar isso acessível para todos!
+          </Description>
+          <Description>
+            O investimento inicial para as primeiras <strong>50 vagas é de R$ 250</strong>, uma oportunidade imperdível para garantir seu lugar neste evento inspirador. Mas atenção, à medida que as vagas se esgotam, os lotes vão aumentando em R$ 50. Isso significa que cada lote subsequente terá um investimento um pouco maior. As aberturas de novos lotes serão divulgadas no instagram oficial (@regionalgmj513) e no momento dda inscrição o sistema calculará automaticamente o lote disponível em função da quantidade de inscritos!
+          </Description>
+          <Description>
+            Por isso, fique atento! A contagem regressiva começou, e queremos viver esses momentos incríveis de fé e comunhão com você. Inscreva-se agora antes que as vagas e essa oportunidade única esgotem!  
           </Description>
           <ButtonGroup>
             <NextLink href="#early-access" passHref>
               <Button>
-                Subscribe to the newsletter <span>&rarr;</span>
+                Faça a inscrição agora <span>&rarr;</span>
               </Button>
-            </NextLink>
-            <NextLink href="#whitepaper" passHref>
-              <OutlinedButton transparent>
-                Features <span>&rarr;</span>
-              </OutlinedButton>
             </NextLink>
           </ButtonGroup>
         </Stack>
@@ -46,7 +46,7 @@ const Stack = styled.div`
   display: flex;
   flex-direction: column;
   padding: 12.5rem 0;
-  color: rgb(var(--textSecondary));
+  color: var(--textLight);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -67,10 +67,10 @@ const Stack = styled.div`
 `;
 
 const OutlinedButton = styled(Button)`
-  border: 1px solid rgb(var(--textSecondary));
-  color: rgb(var(--textSecondary));
+  border: 1px solid var(--textLight);
+  color: var(--textLight);
 `;
 
 const CtaWrapper = styled.div`
-  background: rgb(var(--secondary));
+  background: var(--darkGreenColor);
 `;

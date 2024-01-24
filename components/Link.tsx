@@ -25,16 +25,16 @@ const Anchor = styled.a`
   background-size: 100% 0px;
   transition: 100ms;
   transition-property: background-size, text-decoration, color;
-  color: rgb(var(--primary));
+  color: var(--darkGreenColor);
 
   &:hover {
     background-size: 100% 100%;
     text-decoration: none;
-    color: rgb(var(--background));
+    color: var(--darkBlueColor));
   }
 
   &:active {
-    color: rgb(var(--background));
+    color: var(--darkBlueColor));
     background-size: 100% 100%;
   }
 `;

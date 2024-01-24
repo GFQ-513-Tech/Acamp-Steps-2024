@@ -4,13 +4,14 @@ import { media } from 'utils/media';
 const OverTitle = styled.span`
   display: block;
   &::before {
+    color: var(--white);
     position: relative;
     bottom: -0.1em;
     content: '';
     display: inline-block;
     width: 0.9em;
     height: 0.9em;
-    background-color: rgb(var(--primary));
+    background-color: var(--blueNormalColor);
     line-height: 0;
     margin-right: 1em;
   }

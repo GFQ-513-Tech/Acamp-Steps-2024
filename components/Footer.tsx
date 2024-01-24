@@ -106,8 +106,8 @@ function ListItem({ title, href }: SingleFooterListItem) {
 const FooterWrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 4rem;
-  background: rgb(var(--secondary));
-  color: rgb(var(--textSecondary));
+  background: var(--darkGreenColor);
+  color: var(--textLight);
 `;
 
 const ListContainer = styled.div`
