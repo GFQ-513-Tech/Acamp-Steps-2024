@@ -5,15 +5,16 @@ import Collapse from './Collapse';
 import RichText from './RichText';
 
 interface AccordionProps {
+  id?: string;
   title: string;
   isOpen?: boolean;
 }
 
-export default function Accordion({ title, isOpen, children }: PropsWithChildren<AccordionProps>) {
+export default function Accordion({ id, title, isOpen, children }: PropsWithChildren<AccordionProps>) {
   const [hasCollapsed, setHasCollapsed] = useState(!isOpen);
   const isActive = !hasCollapsed;
   return (
-    <AccordionWrapper onClick={() => setHasCollapsed((prev) => !prev)}>
+    <AccordionWrapper id={id} onClick={() => setHasCollapsed((prev) => !prev)}>
       <TitleWrapper>
         <Title>{title}</Title>
         <Icon isActive={isActive}>
@@ -30,7 +31,7 @@ export default function Accordion({ title, isOpen, children }: PropsWithChildren
       </TitleWrapper>
       <Collapse isOpen={isActive} duration={300}>
         <Description>
-          <RichText>{children}</RichText>
+          <RichText className='no-opacity'>{children}</RichText>
         </Description>
       </Collapse>
     </AccordionWrapper>

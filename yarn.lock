@@ -1159,12 +1159,12 @@
     "@babel/plugin-transform-modules-commonjs" "^7.21.2"
     "@babel/plugin-transform-typescript" "^7.21.3"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.9", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.22.3"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.22.3.tgz"
-  integrity sha512-XsDuspWKLUsxwCp6r7EhsExHtYfbe5oAGQ19kqngTdCPUoPQzOPdUbD/pB9PJiwb2ptYKQDjSJT3R6dC+EPqfQ==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.9", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.8", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+  version "7.23.8"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.23.8.tgz"
+  integrity sha512-Y7KbAP984rn1VGMbGqKmBLio9V7y5Je9GvU4rQPCPinCyNfUcToxIXl06d59URp/F3LwinvODxab5N/G6qggkw==
   dependencies:
-    regenerator-runtime "^0.13.11"
+    regenerator-runtime "^0.14.0"
 
 "@babel/template@*", "@babel/template@^7.18.10", "@babel/template@^7.20.7", "@babel/template@^7.22.15", "@babel/template@^7.3.3":
   version "7.22.15"
@@ -9760,6 +9760,14 @@ react-dom@*, "react-dom@^15.5.x || ^16.x || ^17.x || ^18.x", "react-dom@^16 || ^
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-dom@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
+  integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
+  dependencies:
+    loose-envify "^1.1.0"
+    scheduler "^0.23.0"
+
 react-dropzone@14.2.3:
   version "14.2.3"
   resolved "https://registry.npmjs.org/react-dropzone/-/react-dropzone-14.2.3.tgz"
@@ -9860,6 +9868,11 @@ react-schemaorg@^2.0.0:
   resolved "https://registry.npmjs.org/react-schemaorg/-/react-schemaorg-2.0.0.tgz"
   integrity sha512-UqciFKA203ewNjn0zC09uYKuJSvMD8L75L1s/cW4rc7cS64w8l7vaI3SYkuoI/nwCBkJRmOkSJedWDUZBlYZwg==
 
+react-share-icons@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/react-share-icons/-/react-share-icons-1.1.2.tgz"
+  integrity sha512-1b0yeIwbYeZsW69qcGFrJOcjITb2o0L4tXGG6h5Lb3GjcOc4/Jv25ZZDkRT4DgDXV+pGMQGHTZ5QJe40AsUjjQ==
+
 react-share@^4.4.1:
   version "4.4.1"
   resolved "https://registry.npmjs.org/react-share/-/react-share-4.4.1.tgz"
@@ -9867,6 +9880,15 @@ react-share@^4.4.1:
   dependencies:
     classnames "^2.3.2"
     jsonp "^0.2.1"
+
+react-social-icons@^6.10.0:
+  version "6.10.0"
+  resolved "https://registry.npmjs.org/react-social-icons/-/react-social-icons-6.10.0.tgz"
+  integrity sha512-b4sbTE7vZBYF2yIa/ObMb6ZfMexnMF+OnciLv1ujzaioiBabZjSMeYS9Pp4Kh6BAeYejF/QByctns4abqy37rA==
+  dependencies:
+    "@babel/runtime" "^7.23.8"
+    react "^18.2.0"
+    react-dom "^18.2.0"
 
 react-textarea-autosize@^8.3.3:
   version "8.3.3"
@@ -9892,6 +9914,13 @@ react@*, "react@^15.5.x || ^16.x || ^17.x || ^18.x", "react@^16 || ^17 || ^18", 
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+react@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
+  integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
+  dependencies:
+    loose-envify "^1.1.0"
 
 reactcss@^1.2.0:
   version "1.2.3"
@@ -9940,10 +9969,10 @@ regenerate@^1.4.2:
   resolved "https://registry.npmjs.org/regenerate/-/regenerate-1.4.2.tgz"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
 
-regenerator-runtime@^0.13.11:
-  version "0.13.11"
-  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
-  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz"
+  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
 
 regenerator-transform@^0.15.1:
   version "0.15.1"
@@ -10407,6 +10436,13 @@ scheduler@^0.20.2, scheduler@>=0.19.0:
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+scheduler@^0.23.0:
+  version "0.23.0"
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.23.0.tgz"
+  integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
+  dependencies:
+    loose-envify "^1.1.0"
 
 schema-dts@^1.1.2, schema-dts@>=0.7.4:
   version "1.1.2"

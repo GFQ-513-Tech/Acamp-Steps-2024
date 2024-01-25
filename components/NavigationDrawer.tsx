@@ -33,6 +33,7 @@ function NavItemsList({ items }: NavigationDrawerProps) {
   const { close } = OriginalDrawer.useDrawer()
   const router = useRouter()
 
+
   useEffect(() => {
     function handleRouteChangeComplete() {
       close()
@@ -42,12 +43,20 @@ function NavItemsList({ items }: NavigationDrawerProps) {
     return () => router.events.off('routeChangeComplete', handleRouteChangeComplete)
   }, [close, router])
 
+  const handleLinkClick = () => {
+    close();
+  }
+
   return (
     <ul>
       {items.map((singleItem, idx) => {
         return (
           <NavItem key={idx}>
-            <NextLink href={singleItem.href}>{singleItem.title}</NextLink>
+            <NextLink href={singleItem.href}>
+              <a href='' onClick={handleLinkClick}>
+                {singleItem.title}
+              </a>
+            </NextLink>
           </NavItem>
         )
       })}
@@ -67,7 +76,8 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     z-index: var(--z-drawer);
-    background: var(--darkBlueColor));
+    background: var(--navbarBackgroundColor);
+    color: var(--white);
     transition: margin-left 0.3s cubic-bezier(0.82, 0.085, 0.395, 0.895);
     overflow: hidden;
   }

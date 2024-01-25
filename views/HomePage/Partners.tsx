@@ -51,7 +51,6 @@ const Title = styled.h3`
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-align: center;
-  opacity: 0.8;
 
   ${media('<=desktop')} {
     line-height: 1.5;

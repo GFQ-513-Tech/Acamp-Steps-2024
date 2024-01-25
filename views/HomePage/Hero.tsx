@@ -25,7 +25,7 @@ export default function Hero() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <NextImage src="/images/steps-logo.png" alt="steps-logo" width={500} height={500} />
+        <NextImage src="/steps-logo/steps-logo.png" alt="steps-logo" width={500} height={500} />
       </ImageContainer>
     </HeroWrapper>
   );
@@ -77,7 +77,6 @@ const ImageContainer = styled.div`
 
 const Description = styled.p`
   font-size: 1.8rem;
-  opacity: 0.8;
   line-height: 1.6;
 
   ${media('<=desktop')} {

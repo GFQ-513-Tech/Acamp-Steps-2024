@@ -10,7 +10,7 @@ import { media } from 'utils/media';
 
 export default function Cta() {
   return (
-    <CtaWrapper>
+    <CtaWrapper id="investment">
       <Container>
         <Stack>
           <OverTitle>Inscrições e lotes</OverTitle>
@@ -66,11 +66,8 @@ const Stack = styled.div`
   }
 `;
 
-const OutlinedButton = styled(Button)`
-  border: 1px solid var(--textLight);
-  color: var(--textLight);
-`;
-
 const CtaWrapper = styled.div`
-  background: var(--darkGreenColor);
+  background-image: url('/abstract-elements/investment-section.png');
+  background-size: cover;
+  //background: var(--darkGreenColor);
 `;

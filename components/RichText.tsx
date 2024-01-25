@@ -3,8 +3,13 @@ import { media } from 'utils/media';
 
 const RichText = styled.div`
   font-size: 1.8rem;
-  opacity: 0.8;
+  opacity: 0.9;
   line-height: 1.6;
+
+  &.no-opacity a{
+    font-weight: bold;
+    color: var(--orangeNormalColor);
+  }
 
   ol,
   ul {

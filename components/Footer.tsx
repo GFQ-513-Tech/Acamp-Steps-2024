@@ -1,133 +1,114 @@
+import NextImage from 'next/image';
 import NextLink from 'next/link';
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
+import { SocialIcon } from 'react-social-icons';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
 
-type SingleFooterListItem = { title: string; href: string };
-type FooterListItems = SingleFooterListItem[];
-type SingleFooterList = { title: string; items: FooterListItems };
-type FooterItems = SingleFooterList[];
+type SingleFooterSubtitle = string;
+type SingleFooterTitle = string;
+type ListFooterInfo = { title: SingleFooterSubtitle ; subtitle: SingleFooterTitle }[];
 
-const footerItems: FooterItems = [
-  {
-    title: 'Company',
-    items: [
-      { title: 'Privacy Policy', href: '/privacy-policy' },
-      { title: 'Cookies Policy', href: '/cookies-policy' },
-    ],
-  },
-  {
-    title: 'Product',
-    items: [
-      { title: 'Features', href: '/features' },
-      { title: 'Something', href: '/something' },
-      { title: 'Something else', href: '/something-else' },
-      { title: 'And something else', href: '/and-something-else' },
-    ],
-  },
-  {
-    title: 'Knowledge',
-    items: [
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact', href: '/contact' },
-      { title: 'FAQ', href: '/faq' },
-      { title: 'Help Center', href: '/help-center' },
-    ],
-  },
-  {
-    title: 'Something',
-    items: [
-      { title: 'Features2', href: '/features2' },
-      { title: 'Something2', href: '/something2' },
-      { title: 'Something else2', href: '/something-else2' },
-      { title: 'And something else2', href: '/and-something-else2' },
-    ],
-  },
+const footerItems: ListFooterInfo = [
+  { title: 'Organização e coordenadoria regional de Jovens', subtitle: 'Wellyngton Marcondes' },
+  { title: 'Apoio Região 513', subtitle: 'Rev. José Paulo Boccelli' },
 ];
 
 export default function Footer() {
   return (
     <FooterWrapper>
       <Container>
-        <ListContainer>
-          {footerItems.map((singleItem) => (
-            <FooterList key={singleItem.title} {...singleItem} />
-          ))}
-        </ListContainer>
+        <GridWrapper>
+          <NextImage src={'/logos/gfq-logo-branco.svg'} width={100} height={100}/>
+          <ListContainer>
+            {footerItems.map((singleItem) => (
+              <FooterInfo key={singleItem.title} {...singleItem} />
+            ))}
+          </ListContainer>
+          <NextImage src={'/logos/regiao-513-branco.svg'} width={100} height={100}/>
+        </GridWrapper>
+
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
-                <TwitterIcon size={50} round={true} />
-              </a>
+            <NextLink href="https://www.facebook.com/regionalGMJ513" passHref>
+              <SocialIcon
+                network="facebook"
+                bgColor="white"
+                fgColor="var(--darkGreenColor)"
+                url="https://www.facebook.com/regionalGMJ513"
+              />
             </NextLink>
 
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
-              </a>
+            <NextLink href="https://www.instagram.com/regionalgmj513/" passHref>
+              <SocialIcon
+                network="instagram"
+                bgColor="white"
+                fgColor="var(--darkGreenColor)"
+                url="https://www.instagram.com/regionalgmj513/"
+              />
             </NextLink>
 
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a>
-                <LinkedinIcon size={50} round={true} />
-              </a>
+            <NextLink href="https://www.instagram.com/regionalgmj513/" passHref>
+              <SocialIcon
+                network="tiktok"
+                bgColor="white"
+                fgColor="var(--darkGreenColor)"
+                url="https://www.instagram.com/regionalgmj513/"
+              />
             </NextLink>
           </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
+          <Copyright>&copy; Copyright 2024 - Departamento de Tecnologia GFQ Região 513</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
   );
 }
 
-function FooterList({ title, items }: SingleFooterList) {
+function FooterInfo({ title, subtitle }: { title: string; subtitle: string; }) {
   return (
     <ListWrapper>
-      <ListHeader>{title}</ListHeader>
-      {items.map((singleItem) => (
-        <ListItem key={singleItem.href} {...singleItem} />
-      ))}
+      <FooterTitle>{title}</FooterTitle>
+      <FooterSubtitle>{subtitle}</FooterSubtitle>
     </ListWrapper>
   );
 }
 
-function ListItem({ title, href }: SingleFooterListItem) {
-  return (
-    <ListItemWrapper>
-      <NextLink href={href} passHref>
-        <a>{title}</a>
-      </NextLink>
-    </ListItemWrapper>
-  );
-}
+const GridWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  ${media('<=desktop')} {
+    justify-content: center;
+    gap: 30px;
+  }
+`;
 
 const FooterWrapper = styled.div`
-  padding-top: 10rem;
-  padding-bottom: 4rem;
-  background: var(--darkGreenColor);
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-image: url('/abstract-elements/texture.png');
+  background-color: var(--footerBackgroundColor);
   color: var(--textLight);
 `;
 
 const ListContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
 `;
 
-const ListHeader = styled.p`
+const FooterTitle = styled.p`
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 2.25rem;
-  margin-bottom: 2.5rem;
 `;
 
 const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
-  margin-right: 5rem;
+  margin-bottom: 2rem;
 
   & > *:not(:first-child) {
     margin-top: 1rem;
@@ -135,16 +116,14 @@ const ListWrapper = styled.div`
 
   ${media('<=tablet')} {
     flex: 0 40%;
-    margin-right: 1.5rem;
   }
 
   ${media('<=phone')} {
     flex: 0 100%;
-    margin-right: 0rem;
   }
 `;
 
-const ListItemWrapper = styled.p`
+const FooterSubtitle = styled.p`
   font-size: 1.6rem;
 
   a {
@@ -162,6 +141,10 @@ const ShareBar = styled.div`
 const Copyright = styled.p`
   font-size: 1.5rem;
   margin-top: 0.5rem;
+
+  ${media('<=tablet')} {
+    margin-top: 2rem;
+  }
 `;
 
 const BottomBar = styled.div`

@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
   --salmonColor: #f8d1af;
   --darkGreenColor: #1f432e;
   --darkBlueColor: #1a202c;
-  --blueNormalColor: #1673ff;
+  --orangeNormalColor: #e5772e;
 
   /*Typograph*/
   --textDark: #1a202c;
@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
   --navbarTextColor: #ffffff;
 
   /*Footer Color*/
-  --footerBackgroundColor: #1a202c;
+  --footerBackgroundColor: var(--darkGreenColor);
   --footerTextColor: #ffffff;
 }
 

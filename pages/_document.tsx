@@ -30,11 +30,11 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="pt-BR">
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
         </Head>
-        <body className="next-light-theme">
+        <body className="next-dark-theme">
           <Main />
           <NextScript />
         </body>

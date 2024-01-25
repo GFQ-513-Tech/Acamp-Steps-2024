@@ -116,6 +116,7 @@ const CustomButton = styled(Button)`
 const NavItemList = styled.div`
   display: flex;
   list-style: none;
+  color: var(--white);
 
   ${media('<desktop')} {
     display: none;
@@ -132,7 +133,6 @@ const LogoWrapper = styled.a`
   display: flex;
   margin-right: auto;
   text-decoration: none;
-
   color: var(--white);
 `;
 

@@ -9,15 +9,15 @@ const Button = styled.a<ButtonProps>`
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  background: ${(p) => (p.transparent ? 'transparent' : p.mainButton ? 'var(--darkGreenColor)' : 'var(--salmonColor)')};
+  background: ${(p) => (p.transparent ? 'transparent' : p.mainButton ? 'var(--darkGreenColor)' : 'var(--orangeNormalColor)')};
   padding: 1.75rem 2.25rem;
   font-size: 1.2rem;
-  color: ${(p) => (p.transparent ? 'var(--textLight)' : p.mainButton ? 'var(--textLight)' : 'var(--textDark)')};
+  color: ${(p) => (p.transparent ? 'var(--textLight)' : p.mainButton ? 'var(--textLight)' : 'var(--textLight)')};
   text-transform: uppercase;
   font-family: var(--font);
   font-weight: bold;
   border-radius: 0.4rem;
-  border: ${(p) => (p.transparent ? 'none' : p.mainButton ? 'var(--darkGreenColor)' : 'var(--salmonColor)')};
+  border: ${(p) => (p.transparent ? 'none' : p.mainButton ? 'var(--darkGreenColor)' : 'var(--orangeNormalColor)')};
   transition: transform 0.3s;
   backface-visibility: hidden;
   will-change: transform;
