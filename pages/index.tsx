@@ -1,15 +1,18 @@
+import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
 import TypebotComponent from 'components/Typebot';
 import { EnvVars } from 'env';
 import { media } from 'utils/media';
+import { getAllPosts } from 'utils/postsFetcher';
 import Cta from 'views/HomePage/Cta';
 import FrequentlyQuestions from 'views/HomePage/FrequentlyQuestions';
 import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
+import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts';
 
-export default function Homepage() {
+export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Head>
@@ -22,7 +25,6 @@ export default function Homepage() {
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
-          {/* <TypebotComponent /> */}
           <Hero />
           <Partners />
           <Line id="acamp2024" />
@@ -44,10 +46,19 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           <Cta />
           <FrequentlyQuestions />
+          <ScrollableBlogPosts posts={posts} />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
+      <TypebotComponent />
     </>
   );
+}
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: await getAllPosts(),
+    },
+  };
 }
 
 const Line = styled.hr`

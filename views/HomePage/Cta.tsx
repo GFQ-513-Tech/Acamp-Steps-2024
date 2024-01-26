@@ -1,3 +1,4 @@
+import { open as openTypebot} from '@typebot.io/js';
 import NextLink from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
@@ -26,7 +27,7 @@ export default function Cta() {
           </Description>
           <ButtonGroup>
             <NextLink href="#early-access" passHref>
-              <Button>
+              <Button onClick={() => openTypebot()}>
                 Faça a inscrição agora <span>&rarr;</span>
               </Button>
             </NextLink>

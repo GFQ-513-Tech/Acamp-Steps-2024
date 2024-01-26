@@ -1,40 +1,19 @@
-import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import styled from 'styled-components';
 
-declare global {
-    interface Window {
-        Typebot: any;
-    }
-}
+const Bubble = dynamic(() => import('@typebot.io/react').then((module) => module.Bubble), { ssr: false });
 
-function TypebotComponent() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.31/dist/web.js';
-    script.onload = () => {
-      window.Typebot.initBubble({
-        typebot: "0-inicio-t2bvgym",
-        apiHost: "https://viewer.gfq513.com.br",
-        theme: {
-          button: { backgroundColor: "#128C7E" },
-          chatWindow: {
-            backgroundColor: "https://s3.fr-par.scw.cloud/typebot/public/typebots/cli88mae30010mh0f0yzjqn48/background?v=1685470080750"
-          }
-        }
-      });
-    };
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
+// Exemplo de uso do componente Bot
+const TypebotComponent = () => {
   return (
-    <div>
-      
-    </div>
+    <BotWrapper>
+      <Bubble typebot="1-apresenta-o-r7pb3yk" apiHost="https://viewer.gfq513.com.br" />;
+    </BotWrapper>
   );
-}
+};
+
+const BotWrapper = styled.div`
+  display: none;
+`;
 
 export default TypebotComponent;

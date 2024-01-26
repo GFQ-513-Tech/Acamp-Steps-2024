@@ -1,3 +1,4 @@
+import { open as openTypebot} from '@typebot.io/js';
 import NextImage from 'next/image';
 import styled from 'styled-components';
 import Button from 'components/Button';
@@ -7,7 +8,6 @@ import OverTitle from 'components/OverTitle';
 import { media } from 'utils/media';
 
 export default function Hero() {
-
   return (
     <HeroWrapper>
       <Contents>
@@ -17,7 +17,7 @@ export default function Hero() {
           Prepare-se para quatro dias incríveis de louvor, adoração, ensinamentos poderosos e muita diversão! Junte-se a nós e faça parte dessa experiência transformadora!
         </Description>
         <CustomButtonGroup>
-          <Button mainButton>
+          <Button mainButton onClick={() => openTypebot()}>
             Faça sua inscrição <span>&rarr;</span>
           </Button>
         </CustomButtonGroup>

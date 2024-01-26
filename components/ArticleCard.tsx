@@ -1,37 +1,26 @@
 import NextImage from 'next/image';
-import NextLink from 'next/link';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 
 export interface ArticleCardProps {
-  title: string;
-  slug: string;
   imageUrl: string;
-  description: string;
 }
 
-export default function ArticleCard({ title, slug, imageUrl, description }: ArticleCardProps) {
+export default function ArticleCard({ imageUrl}: ArticleCardProps) {
   return (
-    <NextLink href={'/blog/' + slug} passHref>
-      <ArticleCardWrapper className="article-card-wrapper">
-        <HoverEffectContainer>
-          <ImageContainer>
-            <NextImage src={imageUrl} layout="fill" objectFit="cover" alt={title} />
-          </ImageContainer>
-          <Content>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-          </Content>
-        </HoverEffectContainer>
-      </ArticleCardWrapper>
-    </NextLink>
+  <ArticleCardWrapper className="article-card-wrapper">
+    <HoverEffectContainer>
+      <ImageContainer>
+        <NextImage src={imageUrl} layout="fill" objectFit="cover" />
+      </ImageContainer>
+    </HoverEffectContainer>
+  </ArticleCardWrapper>
   );
 }
 
 const ArticleCardWrapper = styled.a`
   display: flex;
   flex-direction: column;
-  height: 45rem;
   max-width: 35rem;
   overflow: hidden;
   text-decoration: none;
