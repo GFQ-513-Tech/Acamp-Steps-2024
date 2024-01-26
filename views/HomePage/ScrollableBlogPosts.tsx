@@ -11,10 +11,11 @@ import { SingleArticle } from 'types';
 import { media } from 'utils/media';
 
 interface ScrollableBlogPostsProps {
-  posts: SingleArticle[];
+  hotelPhotoGallery: SingleArticle[];
+  memoriesPhotoGallery: SingleArticle[];
 }
 
-export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps) {
+export default function ScrollableBlogPosts({ hotelPhotoGallery, memoriesPhotoGallery }: ScrollableBlogPostsProps) {
   const [hasMounted, setHasMounted] = useState(false);
   const { ref, width = 1 } = useResizeObserver<HTMLDivElement>();
 
@@ -29,7 +30,7 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
     <Section>
       <Container>
         <Content>
-          <OverTitle>GALERIA DE FOTOS</OverTitle>
+          <OverTitle>LOCAL</OverTitle>
           <SectionTitle>Hotel Fazenda Terra Verde</SectionTitle>
         </Content>
       </Container>
@@ -37,10 +38,31 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
       <SwiperContainer ref={ref}>
         {hasMounted && (
           <Swiper modules={[A11y]} slidesPerView={noOfItems} spaceBetween={10} loop>
-            {posts.map((singlePost, idx) => (
-              <SwiperSlide key={singlePost.meta.title}>
+            {hotelPhotoGallery.map((article) => (
+              <SwiperSlide key={article.title}>
                 <ArticleCard
-                  imageUrl={singlePost.meta.imageUrl}
+                  imageUrl={article.imageUrl}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
+      </SwiperContainer>
+
+      <Container>
+        <Content>
+          <OverTitle>LEMBRANÇAS</OverTitle>
+          <SectionTitle>Acamp Deeper 2023</SectionTitle>
+        </Content>
+      </Container>
+
+      <SwiperContainer ref={ref}>
+        {hasMounted && (
+          <Swiper modules={[A11y]} slidesPerView={noOfItems} spaceBetween={10} loop>
+            {memoriesPhotoGallery.map((article) => (
+              <SwiperSlide key={article.title}>
+                <ArticleCard
+                  imageUrl={article.imageUrl}
                 />
               </SwiperSlide>
             ))}

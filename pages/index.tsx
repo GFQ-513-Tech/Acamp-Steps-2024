@@ -1,18 +1,19 @@
-import { InferGetStaticPropsType } from 'next';
+//import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
 import TypebotComponent from 'components/Typebot';
 import { EnvVars } from 'env';
+import hotelPhotoGallery from 'public/photo_gallery/hotelPhotoGallery.json';
+import memoriesPhotoGallery from 'public/photo_gallery/memoriesPhotoGallery.json';
 import { media } from 'utils/media';
-import { getAllPosts } from 'utils/postsFetcher';
 import Cta from 'views/HomePage/Cta';
 import FrequentlyQuestions from 'views/HomePage/FrequentlyQuestions';
 import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
 import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts';
 
-export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Homepage() {
   return (
     <>
       <Head>
@@ -46,19 +47,12 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         <DarkerBackgroundContainer>
           <Cta />
           <FrequentlyQuestions />
-          <ScrollableBlogPosts posts={posts} />
+          <ScrollableBlogPosts hotelPhotoGallery={hotelPhotoGallery} memoriesPhotoGallery={memoriesPhotoGallery} />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
       <TypebotComponent />
     </>
   );
-}
-export async function getStaticProps() {
-  return {
-    props: {
-      posts: await getAllPosts(),
-    },
-  };
 }
 
 const Line = styled.hr`
@@ -69,14 +63,11 @@ const Line = styled.hr`
 `;
 
 const HomepageWrapper = styled.div`
-  & > :last-child {
-    padding-bottom: 10rem;
-  }
 `;
 
 const DarkerBackgroundContainer = styled.div`
   background: var(--darkBlueColor);
-
+  
   & > *:not(:first-child) {
     margin-top: 10rem;
   }
