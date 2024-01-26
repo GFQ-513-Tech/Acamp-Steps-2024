@@ -4,11 +4,9 @@ import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { media } from 'utils/media';
 
 export default function Hero() {
-  const { setIsModalOpened } = useNewsletterModalContext();
 
   return (
     <HeroWrapper>
@@ -19,7 +17,7 @@ export default function Hero() {
           Prepare-se para quatro dias incríveis de louvor, adoração, ensinamentos poderosos e muita diversão! Junte-se a nós e faça parte dessa experiência transformadora!
         </Description>
         <CustomButtonGroup>
-          <Button mainButton onClick={() => setIsModalOpened(true)}>
+          <Button mainButton>
             Faça sua inscrição <span>&rarr;</span>
           </Button>
         </CustomButtonGroup>

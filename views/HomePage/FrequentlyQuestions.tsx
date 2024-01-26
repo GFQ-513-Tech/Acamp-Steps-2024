@@ -5,19 +5,19 @@ import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import FaqSection from 'views/HomePage/FaqSection';
 
-export default function FeaturesGallery() {
+export default function FrequentlyQuestions() {
   return (
-    <FeaturesGalleryWrapper id="frequentlyQuestions">
+    <FrequentlyQuestionsWrapper id="frequentlyQuestions">
       <Content>
         <OverTitle>Dúvidas</OverTitle>
         <SectionTitle>Dúvidas Frequentes</SectionTitle>
       </Content>
       <FaqSection />
-    </FeaturesGalleryWrapper>
+    </FrequentlyQuestionsWrapper>
   );
 }
 
-const FeaturesGalleryWrapper = styled(Container)`
+const FrequentlyQuestionsWrapper = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: column;

@@ -12,19 +12,48 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
 .next-light-theme {
-  --background: 251,251,253;
-  --secondBackground: 255,255,255;
-  --text: 10,18,30;
-  --textSecondary: 255,255,255;
-  --primary: 22,115,255; 
-  --secondary: 10,18,30;
-  --tertiary: 231,241,251;
-  --cardBackground: 255,255,255;
-  --inputBackground: 255,255,255;
-  --navbarBackground: 255,255,255;
-  --modalBackground: 251,251,253;
-  --errorColor: 207,34,46;
-  --logoColor: #243A5A;
+  /*Default Colors*/
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /*Main Colors*/
+  --salmonColor: #f8d1af;
+  --darkGreenColor: #1f432e;
+  --darkBlueColor: #1a202c;
+  --orangeNormalColor: #e5772e;
+
+  /*Typograph*/
+  --textDark: #1a202c;
+  --textLight: #ffffff;
+
+  /*Button Component Colors*/
+  --defaultButtonColor: #f8d1af;
+  --defaultButtonTextColor: #1a202c;
+  --secondaryButtonColor: #1a202c;
+  --secondaryButtonTextColor: #ffffff;
+
+  /*Card Component Colors*/
+  --defaultCardBackgroundColor: #2d3748;
+  --defaultCardTextColor: #1a202c;
+  --defaultCardShadowColor: #1a202c;
+
+  /*Input Component Colors*/
+  --defaultInputBackgroundColor: #f8d1af;
+  --defaultInputTextColor: #1a202c;
+  --defaultInputBorderColor: #1a202c;
+  --defaultErrorInputColor: #1a202c;
+
+  /*Modal Component Colors*/
+  --defaultModalBackgroundColor: #1a202c;
+  --defaultModalTextColor: #ffffff;
+
+  /*Navbar Color*/
+  --navbarBackgroundColor: #1f432e;
+  --navbarTextColor: #ffffff;
+
+  /*Footer Color*/
+  --footerBackgroundColor: var(--darkGreenColor);
+  --footerTextColor: #ffffff;
 }
 
 .next-dark-theme {
