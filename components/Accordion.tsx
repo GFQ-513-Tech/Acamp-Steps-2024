@@ -45,7 +45,7 @@ const Title = styled.h3`
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 5;
 `;
 
 const TitleWrapper = styled.div`

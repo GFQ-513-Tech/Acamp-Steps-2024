@@ -25,7 +25,7 @@ export default function Cta() {
             Estamos animados em contar que as inscrições para o Acamp 2024 já estão abertas! Sabemos que investir na sua fé e crescimento pessoal é uma escolha significativa, e queremos tornar isso acessível para todos!
           </Description>
           <Description>
-            O investimento inicial para as primeiras <strong>50 vagas é de R$ 250</strong>, uma oportunidade imperdível para garantir seu lugar neste evento inspirador. Mas atenção, à medida que as vagas se esgotam, os lotes vão aumentando em R$ 50. Isso significa que cada lote subsequente terá um investimento um pouco maior. As aberturas de novos lotes serão divulgadas no instagram oficial (@regionalgmj513) e no momento dda inscrição o sistema calculará automaticamente o lote disponível em função da quantidade de inscritos!
+            O investimento inicial para as primeiras <strong>50 vagas é de R$ 250</strong>, uma oportunidade imperdível para garantir seu lugar neste evento inspirador. Mas atenção, à medida que as vagas se esgotam, os lotes vão aumentando em R$ 50. Isso significa que cada lote subsequente terá um investimento um pouco maior. As aberturas de novos lotes serão divulgadas no instagram oficial (@regionalgmj513) e no momento da inscrição o sistema calculará automaticamente o lote disponível em função da quantidade de inscritos!
           </Description>
           <Description>
             Por isso, fique atento! A contagem regressiva começou, e queremos viver esses momentos incríveis de fé e comunhão com você. Inscreva-se agora antes que as vagas e essa oportunidade única esgotem!  

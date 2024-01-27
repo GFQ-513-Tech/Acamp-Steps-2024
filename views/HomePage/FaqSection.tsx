@@ -7,13 +7,14 @@ export default function FaqSection() {
       <Accordion title="Qual é a programação do Acamp Regional de Jovens e Adolescentes 2024?">
         O Acampamento acontecerá <strong>entre os dias 10/02/2024 e 13/02/2024.</strong> Haverá programação no período da manhã, tarde e
         noite em todos os dias (sendo sábado apenas noite - <strong>chegada a partir das 15h</strong> - e terça apenas manhã - encerramento
-        após 12h). As atividades serão divididas entre cultos, oficinas e atividades ao ar livre.A programação diária, bem como horários de
-        cultos, alimentação e outras atividades serão divulgadas no acampamento e estarão disponíveis nos quartos como agenda para lembrete.
+        após as 12h). As atividades serão divididas entre cultos, oficinas e atividades ao ar livre.A programação diária, bem como horários
+        de cultos, alimentação e outras atividades serão divulgadas no acampamento e estarão disponíveis nos quartos como agenda para
+        lembrete.
       </Accordion>
       <Accordion title="Onde é o local de hospedagem?">
         A hospedagem dos acampantes será no <strong>Hotel Fazenda Terra Verde</strong> localizado entre São Carlos e Analândia{' '}
         <a href="http://maps.google.com/?q=-22.112083,-47.75616">acesse o mapa</a> durante os quatro dias de acampamento. A divisão e
-        organização dos acampamentos nos alojamentos será definida pela equipe e apresentada no primeiro dia de acampamento e deverá ser
+        organização dos acampantes nos alojamentos será definida pela equipe e apresentada no primeiro dia de acampamento e deverá ser
         seguida pelos acampantes, priorizando a divisão entre alojamentos masculinos e femininos.
       </Accordion>
       <Accordion title="Existe alguma restrição de idade para participar do Acamp 2024?">
@@ -53,8 +54,8 @@ export default function FaqSection() {
         <br></br>
         As inscrições diárias serão <strong>unicamente destinadas</strong> para pais de acampantes que desejam realizar visitas, pastores,
         líderes e auxiliares. As inscrições serão analisadas <strong>caso a caso</strong>, podendo <strong>ser recusadas</strong> (caso seja
-        um jovem ou adolescente). O valor para dia completo (com direito a 4 alimentações diárias - nos horários definidos) é de 100R$ e
-        para meio-dia (apenas culto da manhã ou noite com uma refeição - almoço ou jantar) será de 75R$.
+        um jovem ou adolescente). O valor para dia completo (com direito a 4 alimentações diárias - nos horários definidos) é de 100 reais e
+        para meio-dia (apenas culto da manhã ou noite com uma refeição - almoço ou jantar) será de 75 reais.
       </Accordion>
       <Accordion title="Caso eu tenha que sair para trabalhar, posso ter desconto?">
         Não, ainda que você precise sair, poderá voltar e participar do restante da programação completa, porém,{' '}
@@ -80,17 +81,15 @@ export default function FaqSection() {
       <Accordion title="Como será a alimentação durante os dias de acampamento?">
         A inscrição inclui alimentação completa durante os quatro dias sendo:{' '}
         <strong>café da manhã, almoço, café da tarde e jantar.</strong> As refeições serão realizadas nos horários dedicados à alimentação e
-        serão estabelecidas pela equipe da coordenadoria regional. Haverá a opção de
-        <strong>cantina</strong> durante os dias de acampamento com opção de compra de salgados, balas, doces entre outros e venda de
-        brindes como camiseta e caneca oficial.
+        serão estabelecidas pela equipe da coordenadoria regional. Haverá a opção de <strong>cantina</strong> durante os dias de acampamento
+        com opção de compra de salgados, balas, doces entre outros e venda de brindes como camiseta e caneca oficial.
       </Accordion>
       <Accordion title="Existe desconto para irmãos?">
         Sim! Irmãos receberão <strong>10% de desconto em cada inscrição</strong> (o desconto será calculado em função do lote atual no
         momento da inscrição e por isso não é pré-definido). O pagamento deve ser realizado normalmente e o valor de desconto para irmãos
         será estornado na conta do pagante em função da quantidade de irmãos. A análise de desconto para irmãos pode levar maior tempo de
-        análise e estorno sendo
-        <strong>obrigatório</strong> que no momento de inscrição se <strong>especifique que tenha irmãos acampantes</strong> (uma das etapas
-        obrigatórias). Para problemas ou dúvidas{' '}
+        análise e estorno sendo <strong>obrigatório</strong> que no momento de inscrição se{' '}
+        <strong>especifique que tenha irmãos acampantes</strong> (uma das etapas obrigatórias). Para problemas ou dúvidas{' '}
         <a href="https://wa.me/5516981897189?text=Olá%20a%20paz!%20Tenho%20uma%20dúvida%20sobre%20*desconto%20para%20irmãos%20do%20Acampamento%20Steps%202024!*">
           entre em contato conosco!
         </a>

@@ -87,9 +87,11 @@ const DarkerBackgroundContainer = styled.div`
 `;
 
 const WhiteBackgroundContainer = styled.div`
+  background-color: var(--salmonColor);
   background-image: url('/abstract-elements/background-clear.png');
   background-size: cover;
   padding-top: 5rem;
+  padding-bottom: 5rem;
 
   & > :last-child {
     padding-bottom: 15rem;
