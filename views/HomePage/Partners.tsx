@@ -1,6 +1,9 @@
+// Next and react Imports
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+
+// Components
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Container from 'components/Container';

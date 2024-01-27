@@ -1,7 +1,12 @@
+// Typebot Component
 import { open as openTypebot} from '@typebot.io/js';
+
+// Next and react Imports
 import NextLink from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
+
+// Components
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';

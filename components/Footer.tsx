@@ -1,7 +1,10 @@
+// Next and react Imports
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 import styled from 'styled-components';
+
+// Components
 import Container from 'components/Container';
 import { media } from 'utils/media';
 
@@ -19,13 +22,13 @@ export default function Footer() {
     <FooterWrapper>
       <Container>
         <GridWrapper>
-          <NextImage src={'/logos/gfq-logo-branco.svg'} width={100} height={100}/>
+          <NextImage src={'/logos/gfq/gfq-logo-branco.svg'} width={100} height={100}/>
           <ListContainer>
             {footerItems.map((singleItem) => (
               <FooterInfo key={singleItem.title} {...singleItem} />
             ))}
           </ListContainer>
-          <NextImage src={'/logos/regiao-513-branco.svg'} width={100} height={100}/>
+          <NextImage src={'/logos/regiao-513/regiao-513-branco.svg'} width={100} height={100}/>
         </GridWrapper>
 
         <BottomBar>
@@ -48,12 +51,12 @@ export default function Footer() {
               />
             </NextLink>
 
-            <NextLink href="https://www.instagram.com/regionalgmj513/" passHref>
+            <NextLink href="https://www.tiktok.com/@regionalgmj513" passHref>
               <SocialIcon
                 network="tiktok"
                 bgColor="white"
                 fgColor="var(--darkGreenColor)"
-                url="https://www.instagram.com/regionalgmj513/"
+                url="https://www.tiktok.com/@regionalgmj513"
               />
             </NextLink>
           </ShareBar>

@@ -53,7 +53,7 @@ function NavItemsList({ items }: NavigationDrawerProps) {
         return (
           <NavItem key={idx}>
             <NextLink href={singleItem.href}>
-              <a href='' onClick={handleLinkClick}>
+              <a href={singleItem.href} onClick={handleLinkClick}>
                 {singleItem.title}
               </a>
             </NextLink>

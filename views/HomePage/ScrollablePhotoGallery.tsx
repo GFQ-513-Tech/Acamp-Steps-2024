@@ -1,5 +1,8 @@
+// Next and react Imports
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
+// Components
 import { A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ArticleCard from 'components/ArticleCard';
@@ -10,12 +13,12 @@ import { useResizeObserver } from 'hooks/useResizeObserver';
 import { SingleArticle } from 'types';
 import { media } from 'utils/media';
 
-interface ScrollableBlogPostsProps {
+interface ScrollablePhotoGalleryProps {
   hotelPhotoGallery: SingleArticle[];
   memoriesPhotoGallery: SingleArticle[];
 }
 
-export default function ScrollableBlogPosts({ hotelPhotoGallery, memoriesPhotoGallery }: ScrollableBlogPostsProps) {
+export default function ScrollablePhotoGallery({ hotelPhotoGallery, memoriesPhotoGallery }: ScrollablePhotoGalleryProps) {
   const [hasMounted, setHasMounted] = useState(false);
   const { ref, width = 1 } = useResizeObserver<HTMLDivElement>();
 

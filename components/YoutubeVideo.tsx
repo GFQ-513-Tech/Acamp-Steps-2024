@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import playIcon from '../public/play-icon.svg';
+import playIcon from '../public/icons/play-icon.svg';
 
 interface YoutubeVideoProps {
   title?: string;

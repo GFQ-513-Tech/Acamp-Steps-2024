@@ -76,9 +76,10 @@ export default function Navbar({ items }: NavbarProps) {
             <NavItem key={singleItem.href} {...singleItem} />
           ))}
         </NavItemList>
-        <ColorSwitcherContainer>
+        {/* TODO: Change Dark Mode and Light Mode Here */}
+        {/* <ColorSwitcherContainer>
           <ColorSwitcher />
-        </ColorSwitcherContainer>
+        </ColorSwitcherContainer> */}
         <HamburgerMenuWrapper>
           <HamburgerIcon aria-label="Toggle menu" onClick={toggle} />
         </HamburgerMenuWrapper>
@@ -89,13 +90,13 @@ export default function Navbar({ items }: NavbarProps) {
 
 function NavItem({ href, title, outlined }: SingleNavItem) {
   if (outlined) {
-    return <CustomButton>{title}</CustomButton>;
+    return <a href={href}><CustomButton>{title}</CustomButton></a>
   }
 
   return (
     <NavItemWrapper outlined={outlined}>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+        <a href={href}>{title}</a>
       </NextLink>
     </NavItemWrapper>
   );
@@ -117,6 +118,8 @@ const NavItemList = styled.div`
 `;
 
 const HamburgerMenuWrapper = styled.div`
+  color: var(--white);
+
   ${media('>=desktop')} {
     display: none;
   }

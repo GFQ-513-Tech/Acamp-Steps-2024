@@ -1,15 +1,22 @@
+// TypebotComponent
 import { open as openTypebot} from '@typebot.io/js';
+
+// Next and react Imports
 import NextImage from 'next/image';
 import styled from 'styled-components';
+
+// Components
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
+
+// Utils
 import { media } from 'utils/media';
 
-export default function Hero() {
+export default function Steps() {
   return (
-    <HeroWrapper>
+    <StepsWrapper>
       <Contents>
         <CustomOverTitle>Geração forte quadrangular região 513</CustomOverTitle>
         <Heading>ACAMP GFQ 2024 STEPS</Heading>
@@ -23,13 +30,13 @@ export default function Hero() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <NextImage src="/steps-logo/steps-logo.png" alt="steps-logo" width={500} height={500} />
+        <NextImage src="/logos/steps/steps-logo.png" alt="steps-logo" width={500} height={500} />
       </ImageContainer>
-    </HeroWrapper>
+    </StepsWrapper>
   );
 }
 
-const HeroWrapper = styled(Container)`
+const StepsWrapper = styled(Container)`
   display: flex;
   padding-top: 5rem;
 

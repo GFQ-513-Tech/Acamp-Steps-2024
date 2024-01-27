@@ -1,17 +1,25 @@
-//import { InferGetStaticPropsType } from 'next';
+// Next and react Imports
 import Head from 'next/head';
 import styled from 'styled-components';
+
+// Components
 import BasicSection from 'components/BasicSection';
 import TypebotComponent from 'components/Typebot';
+
+// Env
 import { EnvVars } from 'env';
-import hotelPhotoGallery from 'public/photo_gallery/hotelPhotoGallery.json';
-import memoriesPhotoGallery from 'public/photo_gallery/memoriesPhotoGallery.json';
+
+// Photo Gallery Files
+import hotelPhotoGallery from 'public/homepage-content/photo-gallery/hotelPhotoGallery.json';
+import memoriesPhotoGallery from 'public/homepage-content/photo-gallery/memoriesPhotoGallery.json';
 import { media } from 'utils/media';
+
+// Views Components of Index Page
 import Cta from 'views/HomePage/Cta';
 import FrequentlyQuestions from 'views/HomePage/FrequentlyQuestions';
-import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
-import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts';
+import ScrollablePhotoGallery from 'views/HomePage/ScrollablePhotoGallery';
+import Steps from 'views/HomePage/Steps';
 
 export default function Homepage() {
   return (
@@ -26,15 +34,15 @@ export default function Homepage() {
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
-          <Hero />
+          <Steps />
           <Partners />
           <Line id="acamp2024" />
-          <BasicSection imageUrl="/home-content/first-image.svg" title="O que esperar?" overTitle="Acamp 2024">
+          <BasicSection imageUrl="/homepage-content/presentation-section/first-image.svg" title="O que esperar?" overTitle="Acamp 2024">
             <p>
               Se você está em busca de inspiração, conexão e uma experiência inesquecível, você está no lugar certo. Este não é apenas um acampamento; é uma jornada de fé, amizade e crescimento. Junte-se a nós enquanto celebramos a juventude, exploramos a Palavra e construímos memórias que durarão para toda a vida!
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/home-content/second-image.svg" title="Nossa Programação" overTitle="Acamp 2024" reversed>
+          <BasicSection imageUrl="/homepage-content/presentation-section/second-image.svg" title="Nossa Programação" overTitle="Acamp 2024" reversed>
             <p>
               O Acamp GFQ 2024 (Steps) acontecerá entre os dias 10 e 13 de Fevereiro  no Hotel Fazenda Terra Verde localizado entre São Carlos e Analândia. Junte-se a nós para um fim de semana que vai superar suas expectativas, fortalecer sua fé e criar laços duradouros. 
             </p>
@@ -47,7 +55,7 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           <Cta />
           <FrequentlyQuestions />
-          <ScrollableBlogPosts hotelPhotoGallery={hotelPhotoGallery} memoriesPhotoGallery={memoriesPhotoGallery} />
+          <ScrollablePhotoGallery hotelPhotoGallery={hotelPhotoGallery} memoriesPhotoGallery={memoriesPhotoGallery} />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
       <TypebotComponent />

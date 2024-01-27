@@ -1,8 +1,13 @@
+// Next and react Imports
 import React from 'react';
 import styled from 'styled-components';
+
+// Components
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
+
+// Views of the page
 import FaqSection from 'views/HomePage/FaqSection';
 
 export default function FrequentlyQuestions() {

@@ -4,8 +4,8 @@ export function HamburgerIcon(props: IconProps) {
   return (
     <Icon {...props}>
       <svg
-        stroke="currentColor"
-        fill="currentColor"
+        stroke="#fff"
+        fill="#fff"
         strokeWidth="0"
         viewBox="0 0 1024 1024"
         aria-hidden="true"

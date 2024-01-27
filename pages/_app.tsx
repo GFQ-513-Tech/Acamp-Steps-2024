@@ -20,7 +20,7 @@ const navItems: NavItems = [
   { title: 'Acamp 2024', href: '#acamp2024' },
   { title: 'Investimento', href: '#investment' },
   { title: 'Dúvidas Frequentes', href: '#frequentlyQuestions' },
-  { title: 'Fale Conosco', href: '/contact', outlined: true },
+  { title: 'Fale Conosco', href: 'https://wa.me/5516981897189?text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20*Acampamento%20Steps%202024!*', outlined: true },
 ];
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" type="image/png" href="/steps-logo/steps-logo.png" />        
+        <link rel="icon" type="image/png" href="/logos/steps/steps-logo.png" />        
         {/* <link rel="alternate" type="application/rss+xml" href={EnvVars.URL + 'rss'} title="RSS 2.0" /> */}
         {/* <script
           dangerouslySetInnerHTML={{
