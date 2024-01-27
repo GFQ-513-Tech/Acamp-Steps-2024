@@ -27,9 +27,8 @@ export default function Homepage() {
       <Head>
         <title>{EnvVars.SITE_NAME}</title>
         <meta
-          //#TODO: Change this description
-          name="description"
-          content="Tempor nostrud velit fugiat nostrud duis incididunt Lorem deserunt est tempor aute dolor ad elit."
+          name="Acamp Steps 2024 - User View"
+          content="Acampamento de Jovens Steps 2024 da Igreja Quadrangular Região 513 - São Carlos/SP"
         />
       </Head>
       <HomepageWrapper>
