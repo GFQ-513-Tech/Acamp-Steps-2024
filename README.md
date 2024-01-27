@@ -3,6 +3,12 @@
 
 <p align="center">Este projeto é uma landing page básica construída utilizando React com Next.js. Sua funcionalidade principal é fornecer informações e conhecimentos básicos por meio da página. Além disso, o projeto integra-se com a plataforma Typebot, que oferece um chatbot para interação dos usuários. O Typebot permite uma experiência interativa, onde os usuários podem fazer perguntas, receber respostas e explorar conteúdos adicionais diretamente na página. Esta landing page é ideal para compartilhar informações de forma dinâmica e envolvente, proporcionando uma experiência informativa e interativa para os visitantes.</p>
 
+<p align="center">
+  <img src="https://github.com/joaolucasp/GFQ-Acamp-Steps-2024/assets/83319546/74356b99-21b2-4c29-aac5-665044b67b19" alt="Logo" width="49%">
+  <img src="https://github.com/joaolucasp/GFQ-Acamp-Steps-2024/assets/83319546/f3c3a72c-a658-4945-a8bf-53970811c840" alt="Logo" width="49%">
+  <img src="https://github.com/joaolucasp/GFQ-Acamp-Steps-2024/assets/83319546/bc5b7fa3-862f-455e-9475-c074294391b4" alt="Logo" width="30%">
+</p>
+
 </br>
 
 ![npm](https://img.shields.io/npm/v/nodemon?logo=Nodemon&style=plastic) ![npm](https://img.shields.io/npm/v/express?style=plastic) ![GitHub repo size](https://img.shields.io/github/repo-size/joaolucasp/GFQ-Acamp-Steps-2024) ![GitHub language count](https://img.shields.io/github/languages/count/joaolucasp/GFQ-Acamp-Steps-2024?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/joaolucasp/GFQ-Acamp-Steps-2024) ![GitHub open issues](https://img.shields.io/github/issues/joaolucasp/GFQ-Acamp-Steps-2024)
