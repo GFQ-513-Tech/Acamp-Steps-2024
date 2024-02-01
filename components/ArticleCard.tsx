@@ -1,20 +1,43 @@
+
 import NextImage from 'next/image';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
+import Spinner from './Spinner';
+
 
 export interface ArticleCardProps {
   imageUrl: string;
 }
 
-export default function ArticleCard({ imageUrl}: ArticleCardProps) {
+export default function ArticleCard({ imageUrl }: ArticleCardProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setImageLoaded(true);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  });
+
   return (
-  <ArticleCardWrapper className="article-card-wrapper">
-    <HoverEffectContainer>
-      <ImageContainer>
-        <NextImage src={imageUrl} layout="fill" objectFit="cover" />
-      </ImageContainer>
-    </HoverEffectContainer>
-  </ArticleCardWrapper>
+    <ArticleCardWrapper className="article-card-wrapper">
+      <HoverEffectContainer>
+        {!imageLoaded && (
+          <ImageContainer>
+            <SpinnerWrapper>
+              <Spinner color="var(--white)" size={50} thickness={6} />
+            </SpinnerWrapper>
+          </ImageContainer>
+        )}
+        <ImageContainer style={{ display: imageLoaded ? 'block' : 'none' }}>
+          <NextImage src={imageUrl} layout="fill" objectFit="cover" />
+        </ImageContainer>
+      </HoverEffectContainer>
+    </ArticleCardWrapper>
   );
 }
 
@@ -25,7 +48,6 @@ const ArticleCardWrapper = styled.a`
   overflow: hidden;
   text-decoration: none;
   border-radius: 0.6rem;
-  background: var(--defaultCardBackgroundColor);
   cursor: pointer;
   color: var(--textDark);
 `;
@@ -45,6 +67,7 @@ const HoverEffectContainer = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   height: 30rem;
+  background-color: rgba(31, 67, 46, 0.5);
 
   &:before {
     display: block;
@@ -64,4 +87,12 @@ const ImageContainer = styled.div`
   ${media('<=desktop')} {
     width: 100%;
   }
+`;
+
+const SpinnerWrapper = styled.div`
+  display: flex;
+  background-color: rgba(31, 67, 46, 0.5);
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 `;

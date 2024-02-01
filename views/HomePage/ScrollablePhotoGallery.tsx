@@ -89,6 +89,7 @@ const Content = styled.div`
 `;
 
 const Section = styled.section`
+  background-color: var(--salmonColor);
   background-image: url('/abstract-elements/background-clear.png');
   display: flex;
   flex-direction: column;
