@@ -92,7 +92,7 @@ const GridWrapper = styled.div`
 const FooterWrapper = styled.div`
   padding-top: 6rem;
   padding-bottom: 2rem;
-  background-image: url('/abstract-elements/texture.png');
+  background-image: url('/abstract-elements/texture.webp');
   background-color: var(--footerBackgroundColor);
   color: var(--textLight);
 `;

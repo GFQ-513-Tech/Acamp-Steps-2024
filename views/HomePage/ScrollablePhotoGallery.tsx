@@ -90,7 +90,7 @@ const Content = styled.div`
 
 const Section = styled.section`
   background-color: var(--salmonColor);
-  background-image: url('/abstract-elements/background-clear.png');
+  background-image: url('/abstract-elements/background-clear.webp');
   display: flex;
   flex-direction: column;
   padding: 10rem 0 0 0;

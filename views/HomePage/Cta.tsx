@@ -73,7 +73,7 @@ const Stack = styled.div`
 `;
 
 const CtaWrapper = styled.div`
-  background-image: url('/abstract-elements/investment-section.png');
+  background-image: url('/abstract-elements/investment-section.webp');
   background-size: cover;
   //background: var(--darkGreenColor);
 `;
