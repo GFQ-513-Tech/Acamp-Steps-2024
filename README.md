@@ -54,6 +54,8 @@ npm install -g yarn
 npm run dev
 ```
 
+OBS: Caso você tenha problema em instalar as dependências, execute: `npm install --ignore-scripts` ou `npm install --force --ignore-scripts`
+
 ## 🤲🏻 Contribuindo
 
 As contribuições são o que tornam a comunidade um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será **muito apreciada**.

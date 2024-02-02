@@ -16,7 +16,7 @@ const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr
 
 type NavbarProps = { items: NavItems };
 type ScrollingDirections = 'up' | 'down' | 'none';
-type NavbarContainerProps = { hidden: boolean; transparent: boolean };
+type NavbarContainerProps = { hidden: boolean; transparent: string };
 
 export default function Navbar({ items }: NavbarProps) {
   const router = useRouter();
@@ -61,7 +61,7 @@ export default function Navbar({ items }: NavbarProps) {
   }
 
   const isNavbarHidden = scrollingDirection === 'down';
-  const isTransparent = scrollingDirection === 'none';
+  const isTransparent = (scrollingDirection === 'none').toString();
 
   return (
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>

@@ -1,10 +1,7 @@
 import { PropsWithChildren } from 'react';
 import styled, { css } from 'styled-components';
 
-// FIXME: There is some bug here related to transparent and mainbutton types, 
-// need to fix some day, this doesn't affect runtime
-
-type ButtonProps = PropsWithChildren<{ transparent?: boolean; mainbutton?: boolean }>;
+type ButtonProps = PropsWithChildren<{ $transparent?: boolean; $mainbutton?: boolean }>;
 
 const Button = styled.span<ButtonProps>`
   border: none;
@@ -25,13 +22,13 @@ const Button = styled.span<ButtonProps>`
 
   /* Conditionally apply styles based on the mainButton prop */
   ${(props: ButtonProps) =>
-    props.transparent
+    props.$transparent
       ? css`
           background: transparent;
           color: var(--textLight);
           border: none;
         `
-      : props.mainbutton
+      : props.$mainbutton
       ? css`
           background: var(--darkGreenColor);
           color: var(--textLight);

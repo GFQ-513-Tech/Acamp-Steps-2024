@@ -24,7 +24,7 @@ export default function Steps() {
           Prepare-se para quatro dias incríveis de louvor, adoração, ensinamentos poderosos e muita diversão! Junte-se a nós e faça parte dessa experiência transformadora!
         </Description>
         <CustomButtonGroup>
-          <Button mainbutton onClick={() => openTypebot()}>
+          <Button $mainbutton onClick={() => openTypebot()}>
             Faça sua inscrição <span>&rarr;</span>
           </Button>
         </CustomButtonGroup>

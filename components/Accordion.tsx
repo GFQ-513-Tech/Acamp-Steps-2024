@@ -17,7 +17,7 @@ export default function Accordion({ id, title, isOpen, children }: PropsWithChil
     <AccordionWrapper id={id} onClick={() => setHasCollapsed((prev) => !prev)}>
       <TitleWrapper>
         <Title>{title}</Title>
-        <Icon isActive={isActive}>
+        <Icon $isActive={isActive}>
           <svg
             viewBox="0 0 24 24"
             focusable="false"
@@ -55,13 +55,13 @@ const TitleWrapper = styled.div`
 `;
 
 type IconProps = {
-  isActive: boolean;
+  $isActive: boolean;
 };
 
-const Icon = styled.div`
+const Icon = styled.div<IconProps>`
   width: 2.4rem;
   transition: transform 0.3s;
-  transform: rotateZ(${(props: IconProps) => (props.isActive ? 180 : 0)}deg);
+  transform: rotateZ(${(props) => (props.$isActive ? 180 : 0)}deg);
 `;
 
 const Description = styled.div`
