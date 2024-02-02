@@ -25,7 +25,7 @@ const Section = styled.section`
   background-image: url('/abstract-elements/background-clear.webp');
   display: flex;
   flex-direction: column;
-  padding: 10rem 0 0 0;
+  padding: 10rem 0 20rem 0;
 
   & > *:not(:first-child) {
     margin-top: 1rem;

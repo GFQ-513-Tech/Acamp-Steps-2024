@@ -21,13 +21,13 @@ export default function Footer() {
     <FooterWrapper>
       <Container>
         <GridWrapper>
-          <Image alt="Geração Forte - logo branca" src={'/logos/gfq/gfq-logo-branco.svg'} width={100} height={100}/>
+          <Image alt="Geração Forte - logo branca" src={'/logos/gfq/gfq-logo-branco.svg'} width={100} height={100} loading="lazy"/>
           <ListContainer>
             {footerItems.map((singleItem) => (
               <FooterInfo key={singleItem.title} {...singleItem} />
             ))}
           </ListContainer>
-          <Image alt="Quadrangular Região - logo branca" src={'/logos/regiao-513/regiao-513-branco.svg'} width={100} height={100}/>
+          <Image alt="Quadrangular Região - logo branca" src={'/logos/regiao-513/regiao-513-branco.svg'} width={100} height={100} loading="lazy"/>
         </GridWrapper>
 
         <BottomBar>

@@ -30,7 +30,7 @@ export default function Steps() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <Image src="/steps-logo/steps-logo.png" alt="steps-logo" width={500} height={500} />
+        <Image src="/logos/steps/steps-logo.png" alt="steps-logo" width={500} height={500} loading="lazy"/>
       </ImageContainer>
     </StepsWrapper>
   );

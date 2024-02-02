@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 
@@ -11,7 +11,9 @@ export default function ArticleCard({ imageUrl }: ArticleCardProps) {
   return (
     <ArticleCardWrapper className="article-card-wrapper">
       <HoverEffectContainer>
-          <Image alt="" src={imageUrl} fill objectFit="cover"/>
+        <ImageContainer>
+          <Image alt="" src={imageUrl} fill style={{objectFit:"cover"}} sizes="(max-width: 640px) 100vw, 50vw" loading="lazy" />
+        </ImageContainer>
       </HoverEffectContainer>
     </ArticleCardWrapper>
   );
@@ -32,6 +34,8 @@ const HoverEffectContainer = styled.div`
   transition: transform 0.3s;
   backface-visibility: hidden;
   will-change: transform;
+  height: 300px; 
+  position: relative;
 
   &:hover {
     border-radius: 0.6rem;
@@ -42,7 +46,7 @@ const HoverEffectContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 30rem;
+  height: 100%; /* Set the height to 100% to maintain the aspect ratio */
   background-color: rgba(31, 67, 46, 0.5);
 
   &:before {
@@ -63,12 +67,5 @@ const ImageContainer = styled.div`
   ${media('<=desktop')} {
     width: 100%;
   }
-`;
-
-const SpinnerWrapper = styled.div`
-  display: flex;
-  background-color: rgba(31, 67, 46, 0.5);
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
+}
 `;
