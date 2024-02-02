@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 type ButtonProps = PropsWithChildren<{ transparent?: boolean; mainButton?: boolean }>;
 
-const Button = styled.a<ButtonProps>`
+const Button = styled.span<ButtonProps>`
   border: none;
   background: none;
   display: inline-block;

@@ -1,5 +1,4 @@
-// Components
-import NextImage from "next/legacy/image";
+import Image from "next/image";
 import React from 'react';
 import styled from 'styled-components';
 import { Autoplay } from 'swiper/modules';
@@ -33,7 +32,7 @@ export default function Partners() {
       >
         {PARTNER_LOGOS.map((logo) => (
           <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={130} height={130} />
+            <Image src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={130} height={130} />
           </SwiperSlide>
         ))}
       </Swiper>

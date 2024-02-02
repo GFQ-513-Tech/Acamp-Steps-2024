@@ -2,7 +2,7 @@
 import { open as openTypebot} from '@typebot.io/js';
 
 // Next and react Imports
-import NextImage from "next/legacy/image";
+import Image from "next/image";
 import styled from 'styled-components';
 
 // Components
@@ -30,7 +30,7 @@ export default function Steps() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <NextImage src="/logos/steps/steps-logo.png" alt="steps-logo" width={500} height={500} />
+        <Image src="/steps-logo/steps-logo.png" alt="steps-logo" width={500} height={500} />
       </ImageContainer>
     </StepsWrapper>
   );

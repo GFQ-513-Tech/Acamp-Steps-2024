@@ -52,10 +52,8 @@ function NavItemsList({ items }: NavigationDrawerProps) {
       {items.map((singleItem, idx) => {
         return (
           <NavItem key={idx}>
-            <Link legacyBehavior href={singleItem.href} passHref>
-              <a href={singleItem.href} onClick={handleLinkClick}>
-                {singleItem.title}
-              </a>
+            <Link href={singleItem.href} onClick={handleLinkClick}>
+              {singleItem.title}
             </Link>
           </NavItem>
         )

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 
@@ -16,7 +17,7 @@ export default function ArticleCard({ imageUrl }: ArticleCardProps) {
   );
 }
 
-const ArticleCardWrapper = styled.a`
+const ArticleCardWrapper = styled.span`
   display: flex;
   flex-direction: column;
   max-width: 35rem;
