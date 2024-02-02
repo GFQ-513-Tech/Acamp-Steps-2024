@@ -2,7 +2,7 @@
 import { open as openTypebot} from '@typebot.io/js';
 
 // Next and react Imports
-import NextImage from 'next/image';
+import NextImage from "next/legacy/image";
 import styled from 'styled-components';
 
 // Components

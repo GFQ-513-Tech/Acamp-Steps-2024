@@ -1,41 +1,16 @@
-
-import NextImage from 'next/image';
-import { useEffect, useState } from 'react';
+import Image from "next/image";
 import styled from 'styled-components';
 import { media } from 'utils/media';
-import Spinner from './Spinner';
 
-
-export interface ArticleCardProps {
+interface ArticleCardProps {
   imageUrl: string;
 }
 
 export default function ArticleCard({ imageUrl }: ArticleCardProps) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setImageLoaded(true);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  });
-
   return (
     <ArticleCardWrapper className="article-card-wrapper">
       <HoverEffectContainer>
-        {!imageLoaded && (
-          <ImageContainer>
-            <SpinnerWrapper>
-              <Spinner color="var(--white)" size={50} thickness={6} />
-            </SpinnerWrapper>
-          </ImageContainer>
-        )}
-        <ImageContainer style={{ display: imageLoaded ? 'block' : 'none' }}>
-          <NextImage src={imageUrl} layout="fill" objectFit="cover" />
-        </ImageContainer>
+          <Image alt="" src={imageUrl} fill objectFit="cover"/>
       </HoverEffectContainer>
     </ArticleCardWrapper>
   );

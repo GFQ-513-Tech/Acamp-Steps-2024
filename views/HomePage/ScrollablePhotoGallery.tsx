@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 // Components
-import { A11y } from 'swiper';
+import { A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ArticleCard from 'components/ArticleCard';
 import Container from 'components/Container';

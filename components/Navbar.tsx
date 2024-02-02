@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import NextLink from 'next/link';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
@@ -66,11 +66,11 @@ export default function Navbar({ items }: NavbarProps) {
   return (
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
       <Content>
-        <NextLink href="/" passHref>
+        <Link legacyBehavior href="/" passHref>
           <LogoWrapper>
             <Logo />
           </LogoWrapper>
-        </NextLink>
+        </Link>
         <NavItemList>
           {items.map((singleItem) => (
             <NavItem key={singleItem.href} {...singleItem} />
@@ -95,9 +95,9 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
 
   return (
     <NavItemWrapper outlined={outlined}>
-      <NextLink href={href} passHref>
-        <a href={href}>{title}</a>
-      </NextLink>
+      <Link legacyBehavior href={href} passHref>
+        <a>{title}</a>
+      </Link>
     </NavItemWrapper>
   );
 }

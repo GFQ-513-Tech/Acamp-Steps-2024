@@ -1,4 +1,4 @@
-import NextLink from 'next/link';
+import Link from 'next/link';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
@@ -23,11 +23,11 @@ export default function WaveCta() {
             <Button>
               Subscribe to the newsletter <span>&rarr;</span>
             </Button>
-            <NextLink href="/features" passHref>
+            <Link legacyBehavior href="/features" passHref>
               <OutlinedButton transparent>
                 Features <span>&rarr;</span>
               </OutlinedButton>
-            </NextLink>
+            </Link>
           </CustomButtonGroup>
         </Container>
       </CtaWrapper>
