@@ -1,6 +1,5 @@
-// Next and react Imports
-import NextImage from 'next/image';
-import NextLink from 'next/link';
+import Image from "next/image";
+import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 import styled from 'styled-components';
 
@@ -22,43 +21,43 @@ export default function Footer() {
     <FooterWrapper>
       <Container>
         <GridWrapper>
-          <NextImage src={'/logos/gfq/gfq-logo-branco.svg'} width={100} height={100}/>
+          <Image alt="Geração Forte - logo branca" src={'/logos/gfq/gfq-logo-branco.svg'} width={100} height={100} loading="lazy"/>
           <ListContainer>
             {footerItems.map((singleItem) => (
               <FooterInfo key={singleItem.title} {...singleItem} />
             ))}
           </ListContainer>
-          <NextImage src={'/logos/regiao-513/regiao-513-branco.svg'} width={100} height={100}/>
+          <Image alt="Quadrangular Região - logo branca" src={'/logos/regiao-513/regiao-513-branco.svg'} width={100} height={100} loading="lazy"/>
         </GridWrapper>
 
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.facebook.com/regionalGMJ513" passHref>
+            <Link legacyBehavior href="https://www.facebook.com/regionalGMJ513" passHref>
               <SocialIcon
                 network="facebook"
                 bgColor="white"
                 fgColor="var(--darkGreenColor)"
                 url="https://www.facebook.com/regionalGMJ513"
               />
-            </NextLink>
+            </Link>
 
-            <NextLink href="https://www.instagram.com/regionalgmj513/" passHref>
+            <Link legacyBehavior href="https://www.instagram.com/regionalgmj513/" passHref>
               <SocialIcon
                 network="instagram"
                 bgColor="white"
                 fgColor="var(--darkGreenColor)"
                 url="https://www.instagram.com/regionalgmj513/"
               />
-            </NextLink>
+            </Link>
 
-            <NextLink href="https://www.tiktok.com/@regionalgmj513" passHref>
+            <Link legacyBehavior href="https://www.instagram.com/regionalgmj513/" passHref>
               <SocialIcon
                 network="tiktok"
                 bgColor="white"
                 fgColor="var(--darkGreenColor)"
                 url="https://www.tiktok.com/@regionalgmj513"
               />
-            </NextLink>
+            </Link>
           </ShareBar>
           <Copyright>&copy; Copyright 2024 - Departamento de Tecnologia GFQ Região 513</Copyright>
         </BottomBar>

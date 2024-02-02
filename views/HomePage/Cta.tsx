@@ -2,7 +2,7 @@
 import { open as openTypebot} from '@typebot.io/js';
 
 // Next and react Imports
-import NextLink from 'next/link';
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -31,11 +31,11 @@ export default function Cta() {
             Por isso, fique atento! A contagem regressiva começou, e queremos viver esses momentos incríveis de fé e comunhão com você. Inscreva-se agora antes que as vagas e essa oportunidade única esgotem!  
           </Description>
           <ButtonGroup>
-            <NextLink href="#early-access" passHref>
+            <Link legacyBehavior href="#early-access" passHref>
               <Button onClick={() => openTypebot()}>
                 Faça a inscrição agora <span>&rarr;</span>
               </Button>
-            </NextLink>
+            </Link>
           </ButtonGroup>
         </Stack>
       </Container>

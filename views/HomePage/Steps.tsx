@@ -2,7 +2,7 @@
 import { open as openTypebot} from '@typebot.io/js';
 
 // Next and react Imports
-import NextImage from 'next/image';
+import Image from "next/image";
 import styled from 'styled-components';
 
 // Components
@@ -24,13 +24,13 @@ export default function Steps() {
           Prepare-se para quatro dias incríveis de louvor, adoração, ensinamentos poderosos e muita diversão! Junte-se a nós e faça parte dessa experiência transformadora!
         </Description>
         <CustomButtonGroup>
-          <Button mainButton onClick={() => openTypebot()}>
+          <Button mainbutton onClick={() => openTypebot()}>
             Faça sua inscrição <span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <NextImage src="/logos/steps/steps-logo.png" alt="steps-logo" width={500} height={500} />
+        <Image src="/logos/steps/steps-logo.png" alt="steps-logo" width={500} height={500} loading="lazy"/>
       </ImageContainer>
     </StepsWrapper>
   );

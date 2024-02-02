@@ -1,19 +1,16 @@
-import NextImage, { ImageProps } from 'next/image';
+import Image, { ImageProps } from "next/image";
 import React from 'react';
 import styled from 'styled-components';
 
-interface ArticleImageProps extends ImageProps {
-  src: string;
-  caption?: string;
-}
+type ArticleImageProps = ImageProps;
 
-export default function ArticleImage({ src, caption, ...rest }: ArticleImageProps) {
+export default function ArticleImage({ src, alt, ...rest }: ArticleImageProps) {
   return (
     <Wrapper>
       <ImageWrapper>
-        <NextImage
+        <Image
           src={src}
-          alt={caption || 'Article Image'}
+          alt={alt || 'Article Image'}
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPkj6+vBwAC4AFuNSmtGAAAAABJRU5ErkJggg=="
           layout="fill"
@@ -21,7 +18,7 @@ export default function ArticleImage({ src, caption, ...rest }: ArticleImageProp
           {...rest}
         />
       </ImageWrapper>
-      <Caption>{caption}</Caption>
+      <Caption>{alt}</Caption> {/* "alt" variable name was "caption" before, maybe before it was more readable*/}
     </Wrapper>
   );
 }

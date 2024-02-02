@@ -1,4 +1,4 @@
-import NextImage from 'next/image';
+import Image from "next/image";
 import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
@@ -17,7 +17,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
   return (
     <BasicSectionWrapper reversed={reversed}>
       <ImageContainer>
-        <NextImage src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <Image src={imageUrl} alt={title} fill style={{objectFit:"cover"}} loading="lazy"/>
       </ImageContainer>
       <ContentContainer>
         <CustomOverTitle>{overTitle}</CustomOverTitle>
@@ -77,13 +77,13 @@ const ContentContainer = styled.div`
 `;
 
 type Props = Pick<BasicSectionProps, 'reversed'>;
-const BasicSectionWrapper = styled(Container)`
+const BasicSectionWrapper = styled(Container)<Props>`
   display: flex;
   align-items: center;
-  flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
+  flex-direction: ${(props: Props) => (props.reversed ? 'row-reverse' : 'row')};
 
   ${ImageContainer} {
-    margin: ${(p: Props) => (p.reversed ? '0 0 0 5rem' : '0 5rem 0 0')};
+    margin: ${(props: Props) => (props.reversed ? '0 0 0 5rem' : '0 5rem 0 0')};
   }
 
   ${media('<=desktop')} {

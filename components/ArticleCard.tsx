@@ -1,47 +1,25 @@
-
-import NextImage from 'next/image';
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
-import Spinner from './Spinner';
 
-
-export interface ArticleCardProps {
+interface ArticleCardProps {
   imageUrl: string;
 }
 
 export default function ArticleCard({ imageUrl }: ArticleCardProps) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setImageLoaded(true);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  });
-
   return (
     <ArticleCardWrapper className="article-card-wrapper">
       <HoverEffectContainer>
-        {!imageLoaded && (
-          <ImageContainer>
-            <SpinnerWrapper>
-              <Spinner color="var(--white)" size={50} thickness={6} />
-            </SpinnerWrapper>
-          </ImageContainer>
-        )}
-        <ImageContainer style={{ display: imageLoaded ? 'block' : 'none' }}>
-          <NextImage src={imageUrl} layout="fill" objectFit="cover" />
+        <ImageContainer>
+          <Image alt="" src={imageUrl} fill style={{objectFit:"cover"}} sizes="(max-width: 640px) 100vw, 50vw" loading="lazy" />
         </ImageContainer>
       </HoverEffectContainer>
     </ArticleCardWrapper>
   );
 }
 
-const ArticleCardWrapper = styled.a`
+const ArticleCardWrapper = styled.span`
   display: flex;
   flex-direction: column;
   max-width: 35rem;
@@ -56,6 +34,8 @@ const HoverEffectContainer = styled.div`
   transition: transform 0.3s;
   backface-visibility: hidden;
   will-change: transform;
+  height: 300px; 
+  position: relative;
 
   &:hover {
     border-radius: 0.6rem;
@@ -66,7 +46,7 @@ const HoverEffectContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 30rem;
+  height: 100%; /* Set the height to 100% to maintain the aspect ratio */
   background-color: rgba(31, 67, 46, 0.5);
 
   &:before {
@@ -87,12 +67,5 @@ const ImageContainer = styled.div`
   ${media('<=desktop')} {
     width: 100%;
   }
-`;
-
-const SpinnerWrapper = styled.div`
-  display: flex;
-  background-color: rgba(31, 67, 46, 0.5);
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
+}
 `;
