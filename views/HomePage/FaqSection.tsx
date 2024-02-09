@@ -90,12 +90,12 @@ export default function FaqSection() {
         será estornado na conta do pagante em função da quantidade de irmãos. A análise de desconto para irmãos pode levar maior tempo de
         análise e estorno sendo <strong>obrigatório</strong> que no momento de inscrição se{' '}
         <strong>especifique que tenha irmãos acampantes</strong> (uma das etapas obrigatórias). Para problemas ou dúvidas{' '}
-        <a href="https://wa.me/5516981897189?text=Olá%20a%20paz!%20Tenho%20uma%20dúvida%20sobre%20*desconto%20para%20irmãos%20do%20Acampamento%20Steps%202024!*">
+        <a href="https://wa.me/5516992979475?text=Olá%20a%20paz!%20Tenho%20uma%20dúvida%20sobre%20*desconto%20para%20irmãos%20do%20Acampamento%20Steps%202024!*">
           entre em contato conosco!
         </a>
       </Accordion>
       <Accordion title="Caso tenha alguma outra dúvida, o que devo fazer?">
-        <a href="https://wa.me/5516981897189?text=Olá,%20tenho%20uma%20dúvida%20sobre%20o%20*Acampamento%20Steps%202024!*">
+        <a href="https://wa.me/5516992979475?text=Olá,%20tenho%20uma%20dúvida%20sobre%20o%20*Acampamento%20Steps%202024!*">
           Entre em contato conosco pelo Whatsapp
         </a>
       </Accordion>

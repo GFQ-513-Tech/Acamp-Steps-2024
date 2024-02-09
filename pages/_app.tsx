@@ -20,7 +20,7 @@ const navItems: NavItems = [
   { title: 'Acamp 2024', href: '#acamp2024' },
   { title: 'Investimento', href: '#investment' },
   { title: 'Dúvidas Frequentes', href: '#frequentlyQuestions' },
-  { title: 'Fale Conosco', href: 'https://wa.me/5516981897189?text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20*Acampamento%20Steps%202024!*', outlined: true },
+  { title: 'Fale Conosco', href: 'https://wa.me/5516992979475?text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20*Acampamento%20Steps%202024!*', outlined: true },
 ];
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
